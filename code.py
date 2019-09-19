@@ -7,12 +7,7 @@ from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-
-#x= [[5.6,70,10],[5,75,12],[4,48,8],[6,55,10],[6,65,7],
-#    [5,57,8],[5.6,77,11],[5,45,8],[5.4,43,5],[6,38,8]]
-#y= ['male','female','female','male','female','male','male','female','female','male']
-#with open() as f:
-
+#read data from excel csv file
 file1=pd.read_csv("C:\\Users\\user\\Desktop\\file.csv")
 
 mylist=[list(file1['actual gender']),list(file1['height']),list(file1['weigt']),list(file1['shoe_size'])]
@@ -26,6 +21,7 @@ for i in range(len(y)):
     new_list=[height[i],weigt[i],shoe_size[i]]
     x.append(new_list)
 
+#test and train data
 test_data = [[190, 70, 43],[154, 75, 42],[181,65,40]]
 test_labels = ['male','male','male']
 
